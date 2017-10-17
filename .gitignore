@@ -1,0 +1,50 @@
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+/vendor
+# cubrid install dir
+/cubrid
+
+/vagrant
+Vagrantfile
+# composer itself is not needed
+composer.phar
+
+composer.lock
+
+# composer.lock in applications is ignored since it's automatically created by composer when application is installed
+/apps/*/composer.lock
+
+# Mac DS_Store Files
+.DS_Store
+
+
+# Uploaded files [added by malik ghanim]
+/api/web/uploads
+/api/web/store
+/api/web/share
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+# ignore sub directory for dev installed apps and extensions
+/apps
+/extensions
+
+    Status API Training Shop Blog About 
+
+

@@ -29,7 +29,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'Tweets',
+        'brandLabel' => 'Tweet Crisis',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -75,7 +75,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; Tweets <?= date('Y') ?></p>
+        <p class="pull-left">&copy; Tweet Crisis <?= date('Y') ?></p>
 
         <p class="pull-right"></p>
     </div>

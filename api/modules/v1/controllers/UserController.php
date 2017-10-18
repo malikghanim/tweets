@@ -78,9 +78,9 @@ class UserController extends \yii\rest\ActiveController {
 			['email' => $request['email']]
 		])->all();
 
-		if (count($checkUser) > 1) {
+		if (count($checkUser) > 0) {
 			$this->response['status'] = 400;
-			$this->response['msg'] = 'username or email is used by more than one user!';
+			$this->response['msg'] = 'User already registerd!';
 			return $this->response;
 		}
 

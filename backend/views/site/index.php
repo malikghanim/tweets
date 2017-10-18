@@ -7,11 +7,14 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully reach maqtoo3 admin panel.</p>
-
-        <p><a class="btn btn-lg btn-success" href="/site/login">Login to manage maqtoo3</a></p>
+        <?php if ($guest): ?>
+            <h1>Congratulations!</h1>    
+            <p class="lead">You have successfully reach Tweet Crisis admin panel.</p>
+            <p><a class="btn btn-lg btn-success" href="/site/login">Login to manage Tweet Crisis</a></p>
+        <?php else: ?>
+            <h2>Welcome to Tweet Crisis admin panel.</h2>
+        <?php endif ?>
+        
     </div>
 
     <div class="body-content">

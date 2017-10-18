@@ -264,7 +264,40 @@ class User extends ActiveRecord implements IdentityInterface, RateLimitInterface
 
     private $allowance;
     private $allowance_updated_at;
+    public function getApiRateInfo()
+    {
+        /*$redis = Yii::$app->redis;
+        $redisApiRate = $redis->hgetall(self::RATE_LIMIT_PREFIX . ':' . (string)$this->id);
+        $apiRate = [];
+        for ($i=0; $i < count($redisApiRate); $i+=2) {
+            $apiRate[$redisApiRate[$i]] = $redisApiRate[$i+1];
+        }
+        return $apiRate;*/
+        return false;
+    }
 
+    public function getRateLimit($request, $action)
+    {
+        return [self::RATE_LIMIT, self::RATE_LIMIT_PERIOD];
+    }
+
+    public function loadAllowance($request, $action)
+    {
+        $apiRate = $this->getApiRateInfo();
+
+        $this->allowance = isset($apiRate['allowance'])?(int)$apiRate['allowance']: self::RATE_LIMIT;
+        $this->allowance_updated_at = isset($apiRate['allowance_updated_at'])?(int)$apiRate['allowance_updated_at']:0;
+        return [$this->allowance, $this->allowance_updated_at];
+    }
+
+    public function saveAllowance($request, $action, $allowance, $timestamp)
+    {
+        /*$redis = Yii::$app->redis;
+        $rateHashId = self::RATE_LIMIT_PREFIX . ':' . (string)$this->id;
+
+        $redis->hmset($rateHashId, 'rateLimit', self::RATE_LIMIT, 'allowance', $allowance, 'allowance_updated_at', $timestamp);*/
+        return false;
+    }
     /////////////////////////
 
     /**

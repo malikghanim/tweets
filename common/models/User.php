@@ -264,7 +264,7 @@ class User extends ActiveRecord implements IdentityInterface, RateLimitInterface
 
     private $allowance;
     private $allowance_updated_at;
-    }
+
     /////////////////////////
 
     /**

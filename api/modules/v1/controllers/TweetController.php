@@ -63,10 +63,10 @@ class TweetController extends MainController
         if (empty($request) || 
             !isset($request->keyword) || 
             !isset($request->tweets) || 
-            !(is_array($request->tweets) && !empty($request->tweets))
+            !is_array($request->tweets)
         ) {
             $this->response['status'] = 400;
-            $this->response['msg'] = 'Invalid Json Structure!';
+            $this->response['massage'] = 'Invalid Json Structure!';
             return $this->response;
         }
 

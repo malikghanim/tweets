@@ -22,11 +22,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'username') ?>
 
-    <?= $form->field($model, 'auth_key') ?>
-
     <?= $form->field($model, 'password_hash') ?>
 
-    <?= $form->field($model, 'password_reset_token') ?>
 
     <?php // echo $form->field($model, 'email') ?>
 
@@ -42,25 +39,6 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'role') ?>
 
-    <?php // echo $form->field($model, 'company') ?>
-
-    <?php // echo $form->field($model, 'api_key') ?>
-
-    <?php // echo $form->field($model, 'api_secret') ?>
-
-    <?php // echo $form->field($model, 'facebook_id') ?>
-
-    <?php // echo $form->field($model, 'google_id') ?>
-
-    <?php // echo $form->field($model, 'is_system_password') ?>
-
-    <?php // echo $form->field($model, 'has_verified_email') ?>
-
-    <?php // echo $form->field($model, 'email_confirm_token') ?>
-
-    <?php // echo $form->field($model, 'user_group') ?>
-
-    <?php // echo $form->field($model, 'ip_address') ?>
 
 
     <div class="form-group">

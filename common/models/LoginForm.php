@@ -90,6 +90,9 @@ class LoginForm extends Model
             if (empty($this->_user))
                 $this->_user = User::findByEmail(strtolower($this->email));
 
+            if (!empty($this->user) && $this->user->role != 11)
+                return null;
+
             if ($this->_user !== Null) {
                 $this->first_name = !is_null($this->_user->first_name) ? $this->_user->first_name : NULL;
                 $this->last_name = !is_null($this->_user->last_name) ? $this->_user->last_name : NULL;
